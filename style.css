@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#acf624, #a2e848 50%, #eee 50%, #eee 100%);
+  font-family: "Poppins", sans-serif;
+}
+img {
+  width: 105%;
+  margin-top: -2rem;
+}
+.img2 {
+  width: 50%;
+  margin-top: 0rem;
+  margin-bottom: -0.6rem;
+}
+.card {
+  cursor: pointer;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  transform-style: preserve-3d;
+  transition: 1s;
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.219),
+    0 20px 20px rgba(0, 0, 0, 0.219);
+}
+.card:hover {
+  transform: perspective(2000px) translateX(50%);
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.15),
+    0 10px 10px rgba(0, 0, 0, 0.15);
+}
+.card .cover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  transition: 1s ease-in-out;
+  transform-origin: left;
+}
+.card .cover img {
+  z-index: 1;
+}
+.card:hover .cover {
+  transform: rotateY(-85deg);
+}
+.card .cover::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 150%;
+  background: #fff;
+  transform: rotate(35deg);
+  box-shadow: 0 0 0 18px #305e81;
+  transition: 0.5s;
+  transition-delay: 1s;
+}
+.card:hover .cover::before {
+  width: 0;
+  box-shadow: 0 0 0 250px #305e81;
+  transition: 0.5s;
+  transform: rotate(143.5deg);
+}
+.card .details {
+  background-image: url(./jason-leung-LiyzkHF8M3Q-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1;
+}
+.card .details h3 {
+  font-weight: 600;
+  margin: 5px 0;
+  color: #e7f4de;
+  font-size: 1.4em;
+}
+.card .details h2 {
+  font-size: 1.4em;
+  letter-spacing: 0px;
+  font-weight: 600;
+  margin: 1px 0;
+  color: #83f75c;
+}
+.card .details p {
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+  width: 100%;
+  color: #83f75c;
+}
+.card .details a {
+  display: inline-block;
+  padding: 7px 20px;
+  background: #0f7299;
+  color: #fff;
+  margin-top: 8px;
+  margin-left: 0.4rem;
+  letter-spacing: 1px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+.card .details a:hover {
+  background-color: #173041;
+}
